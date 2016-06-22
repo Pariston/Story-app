@@ -1,0 +1,14 @@
+<div class="global_container">
+  <form (ngSubmit)="service.register(login.value, password.value, email.value)">
+  <p>
+    <input type="text" placeholder="Podaj login" #login required />
+  </p>
+  <p>
+    <input type="password" placeholder="Podaj hasło" #password required />
+  </p>
+  <p>
+    <input type="email" placeholder="Podaj adres email" #email required />
+  </p>
+  <input type="submit" value="Stwórz konto" />
+    </form>
+</div>

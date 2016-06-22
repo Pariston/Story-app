@@ -1,0 +1,9 @@
+<div class="global_container">
+  <p>
+    <input type="text" placeholder="Podaj login" #login />
+  </p>
+  <p>
+    <input type="password" placeholder="Podaj hasło" #password />
+  </p>
+  <button (click)="service.logIn(login.value, password.value)">Zaloguj się</button>
+</div>

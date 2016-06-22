@@ -1,0 +1,28 @@
+<div class="header_bar">
+  <div class="global_container">
+    <div class="logo">logo marzeń</div>
+    <div class="user_menu">
+      <!--nie mam jeszcze logowania i rejestracji, więc na chwilę obecną zakładam, że użytkownik jest niezalogowany -->
+      <span><a [routerLink]="['/register']">Stwórz konto</a></span>
+      /
+      <span><a [routerLink]="['/login']">Zaloguj się</a></span>
+      <!-- koniec bloku dla niezalogowanego -->
+    </div>
+  </div>
+</div>
+<div class="sub_header">
+  <div class="global_container">
+    <ul class="sh_menu">
+      <li><a [routerLink]="['/homepage']" [routerLinkActive]="['active']">Popularne</a></li>
+      <li><a [routerLink]="['/stories']" [routerLinkActive]="['active']">Opowiadania</a></li>
+      <li><a [routerLink]="['/users']" [routerLinkActive]="['active']">Użytkownicy</a></li>
+      <li><a [routerLink]="['/ranking']" [routerLinkActive]="['active']">Ranking</a></li>
+      <li><a [routerLink]="['/favourites']" [routerLinkActive]="['active']">Ulubione</a></li>
+    </ul>
+    <div class="search_bar">
+      <input type="search" id="search" placeholder="Szukaj..."/>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
