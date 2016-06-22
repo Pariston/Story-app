@@ -1,6 +1,6 @@
 <div class="header_bar">
   <div class="global_container">
-    <div class="logo">logo marzeń</div>
+    <div class="logo"></div>
     <div class="user_menu">
       <!--nie mam jeszcze logowania i rejestracji, więc na chwilę obecną zakładam, że użytkownik jest niezalogowany -->
       <span><a [routerLink]="['/register']">Stwórz konto</a></span>
@@ -20,7 +20,10 @@
       <li><a [routerLink]="['/favourites']" [routerLinkActive]="['active']">Ulubione</a></li>
     </ul>
     <div class="search_bar">
-      <input type="search" id="search" placeholder="Szukaj..."/>
+      <form (ngSubmit)="route.navigate(['/search', search.value])">
+        <input type="text" id="search" placeholder="Szukaj..." #search required/>
+        <input type="submit" id="search_submit" value=""/>
+      </form>
     </div>
   </div>
 </div>

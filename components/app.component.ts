@@ -1,6 +1,6 @@
-import { Component, OnInit }                                                from '@angular/core';
-import { ROUTER_DIRECTIVES, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+
 @Component({
     selector:     'my-app',
     templateUrl:  'public/themes/default/html/globalPage.html',
@@ -8,14 +8,6 @@ import { Location } from '@angular/common';
     directives:   [ ROUTER_DIRECTIVES ]
 })
 
-export class AppComponent implements OnInit {
-  activeRouteLink: String = "";
-
-  constructor (private location: Location, private router: ActivatedRoute) {
-    this.activeRouteLink = location.path();
-  }
-
-  ngOnInit() {
-    console.log(this.router);
-  }
+export class AppComponent {
+  constructor (private route: Router) {}
 }
